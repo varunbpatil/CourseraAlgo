@@ -1,0 +1,26 @@
+========================
+JAVA PROGRAM
+========================
+
+1.  javac -Xlint Kosaraju.java
+
+    Note that the Xlint option is required because I am using an array of ArrayList's.
+
+2.  java -Xss3m Kosaraju
+
+    Note the -Xss3m option.
+    This specifies the stack size for the program.
+    The default stack size is just not enough for the huge number of DFS recursions and throws a StackOverflowError.
+
+
+
+=======================
+PYTHON PROGRAM
+=======================
+
+1.  $ ulimit -s 800000
+
+    This sets the stack size for the program.
+    The default stack size is just not enough for the huge number of DFS recursions and gives segmentation fault.
+
+2.  python kos.py    
